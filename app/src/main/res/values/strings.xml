@@ -7,4 +7,5 @@
     <string name="mbtnreaddata">Read Data</string>
     <string name="mbtnupdate">Update Data</string>
     <string name="mbtndel">Delete Data</string>
+    <string name="mtvresult" />
 </resources>
