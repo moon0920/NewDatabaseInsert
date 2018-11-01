@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <TextView
+                android:id="@+id/mtvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/mtvTitle"
+                android:textSize="25sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/medcontry"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/medcontry"
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:id="@+id/medcity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/medcity"
+                android:inputType="textPersonName" />
+
+            <Button
+                android:id="@+id/mbtninsert"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/mbtninsert"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/mbtnreaddata"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/mbtnreaddata" />
+
+            <Button
+                android:id="@+id/mbtnupdate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/mbtnupdate" />
+
+            <Button
+                android:id="@+id/mbtndel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/mbtndel" />
+        </LinearLayout>
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>

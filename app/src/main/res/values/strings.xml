@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">NewDatabaseInsert</string>
+    <string name="mtvTitle">안녕</string>
+    <string name="medcontry">나라입력</string>
+    <string name="medcity">도시입력</string>
+    <string name="mbtninsert">Insert Record</string>
+    <string name="mbtnreaddata">Read Data</string>
+    <string name="mbtnupdate">Update Data</string>
+    <string name="mbtndel">Delete Data</string>
+</resources>
