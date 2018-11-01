@@ -25,6 +25,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mbtninsert.setOnClickListener(this);
         Button mbtnreaddata = findViewById(R.id.mbtnreaddata);
         mbtnreaddata.setOnClickListener(this);
+        Button mbtnupdate = findViewById(R.id.mbtnupdate);
+        mbtnupdate.setOnClickListener(this);
+        Button mbtndel = findViewById(R.id.mbtndel);
+        mbtndel.setOnClickListener(this);
     }
 
     @Override
@@ -40,9 +44,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Cursor cursor = mdb.rawQuery(query, null);
         String str = "";
 
-        int id1 = view.getId();
         int id;
-        switch (id1){
+        switch (view.getId()){
             case R.id.mbtninsert:// 입력하기
                 mdb.execSQL("INSERT INTO awe_country VALUES (null,'"+country+"','"+city+"');");
                 medcontry.setText("");
@@ -56,6 +59,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     str += (id + "/ country : " + country + " / city : " + city + "\n");
                     mtvresult.setText(str);
                 }
+                break;
+            case R.id.mbtnupdate:
+                String sql = "UPDATE awe_country SET capital='"+city+"' WHERE country = '"+country+"';";
+                mdb.execSQL(sql);
+                break;
+            case R.id.mbtndel:
+                mdb.execSQL("DELETE FROM awe_country WHERE country = '"+country+"';chi");
                 break;
         }
 
